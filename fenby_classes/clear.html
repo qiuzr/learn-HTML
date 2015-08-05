@@ -1,0 +1,52 @@
+<!--clear-->
+<!--如果你将clear:left属性加入某个div中，这个div会被浮在它上面的浮动属性为left的div挤到下面。
+当然你也可以用clear:right，同理，这个div会被浮在它上面的浮动属性为right的div挤到下面。
+最后，你也可以用clear:both，依然同理，只不过浮动属性为left和right的div同时来挤这个div到下面去-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+      <style type='text/css'>		
+         div {
+        	border-radius: 5px;
+        }
+        
+        #header {
+        	height: 50px;
+        	background-color: #F38630;
+        	margin-bottom: 10px;
+        }
+        
+        .left {
+        	height: 300px;
+        	width: 150px;
+        	background-color: #A7DBD8;
+        	float: left;
+        	margin-bottom: 10px;
+        }
+        
+        .right {
+        	height: 600px;
+        	width: 450px;
+        	background-color: #E0E4CC;
+        	float: right;
+        	margin-bottom: 10px;
+        }
+        
+        #footer {
+        	height: 50px;
+        	background-color: #69D2E7;
+       		clear:left;
+		  	clear:right;
+		  	/*或者写成clear:both*/
+        }
+     </style>
+		<title>结果</title>
+	</head>
+	<body>
+		<div id="header"></div>
+		<div class="left"></div>
+		<div class="right"></div>
+		<div id="footer"></div>
+	</body>
+</html>

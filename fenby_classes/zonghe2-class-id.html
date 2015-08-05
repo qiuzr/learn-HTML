@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+      <style type='text/css'>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />		
+    	   /*开始添加你的CSS代码*/
+        div {
+        	position: relative;
+        	display: inline-block;
+            /*display:inline-block,允许其他元素挨着它在同一行上*/
+            /*display:block,块级元素，此元素前后会带有换行符*/
+            /*display:inline,元素会被显示为内联元素，元素前后没有换行符.（默认）内联结地方的所有的元素一个接着一个，但不能作为块：它们将不保持自己的尺寸.*/
+            /*display:none,此元素不会被显示。*/
+        	height: 100px;
+        	width: 100px;
+        	border-radius: 100%;
+        	border: 2px solid black;
+        	margin-left: 5px;
+        	margin-top: 5px;
+        	text-align: center;
+        }
+        
+        div p {
+        	position: relative;
+        	margin-top: 40px;
+        	font-size: 12px;
+        }
+        
+        .friend {
+        	border: 2px dashed green;
+        }
+
+        /*朋友类*/
+        
+        .family {
+        	border: 2px dashed blue;
+        }
+
+        /*家人类*/
+        
+        .enemy {
+        	border: 2px dashed red;
+        }
+        
+        /*敌人类*/
+
+        #best_friend {
+        	border: 4px solid #00C957;
+        }
+
+        /*朋友类中的最好的朋友*/
+        
+        #archnemesis {
+        	border: 4px solid #cc0000;
+        }    	   
+     </style>
+		<title></title>
+	</head>
+	<body>
+		<div class="friend" id="best_friend"><p>小明</p></div>
+		<div class="friend"><p>小李</p></div>
+		<div class="friend"><p>小王</p></div>
+		<div class="friend"><p>小尚</p></div>
+		<div class="friend"><p>小马</p></div>
+		<div class="family"><p>母亲</p></div>
+		<div class="family"><p>父亲</p></div>
+		<div class="family"><p>弟弟</p></div>
+		<div class="family"><p>姐姐</p></div>
+		<div class="enemy"><p>军国主义</p></div>
+		<div class="enemy"><p>战争狂人</p></div>
+		<div class="enemy"><p>外星人</p></div>
+		<div class="enemy"><p>恐龙</p></div>
+		<div class="enemy" id="archnemesis"><p>时光</p></div>
+	</body>
+</html>

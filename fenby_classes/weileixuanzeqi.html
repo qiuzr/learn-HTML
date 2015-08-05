@@ -1,0 +1,44 @@
+<!--伪类选择器-->
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<head>      
+		<title>伪类选择器</title>
+		<style type='text/css'>
+		 a:link {
+		 	color:#46BF18;/*绿色*/
+		 	text-decoration: none;
+		 }
+		 /*一个未点击过的链接*/
+		 a:visited{
+		 	color:blue;
+		 	text-decoration: underline;
+		 	
+		 }
+		 /*一个点击过的链接*/
+		 a:hover {
+              color: red;
+              /*颜色*/
+              font-weight: bold;
+              /*宽度为加粗*/
+              text-decoration: none;
+              /*无下划线*/
+          }
+          /*当你的鼠标停留在链接上*/
+          a:active {
+          	color:#FA05E6;/*粉色*/
+          }
+          /* 鼠标按下去时的状态 */
+         
+        </style>
+	</head>
+
+	<body>
+		<ul>
+			<li><a href="http://www.baidu.com/" target="_blank">百度</a></li>
+			<!--target="_blank" 的意思是让链接在另外一个网页打开-->
+			<li><a href="http://www.google.com/" target="_blank">谷歌</a></li>
+			<li><a href="http://www.sohu.com/" target="_blank">搜狐</a></li>
+			<li><a href="http://www.sina.com.cn/" target="_blank">新浪</a></li>
+		</ul>
+	</body>
+</html>

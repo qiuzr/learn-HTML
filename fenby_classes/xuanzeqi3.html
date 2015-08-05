@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+          <style type='text/css'>		
+			p{font-family:kaiti}
+			div>p{font-family:heiti;font-weight:bold}
+			/*div p {}  会获取到一个<div>内嵌套有任何<p>
+			div > p {} 会直接获取下一级，也就是直接嵌套在另一个元素内部，在你们之间，没有任何元素*/
+			div ul li p{color:red;text-decoration:underline}
+         </style>
+		<title>最终文本挑战</title>
+	</head>
+	<body>
+		<p>介绍:CSS的代码</p>
+		<div>
+			<p>剧情简介：当您设置像'P'有一定值的选择器的属性，该值适用于 <em>所有</em>p标签。
+			但是，如果你改变了相同的属性为p的更具体的不同的， 这种变化会 <em>重写</em>通用变量。
+			</p>
+			<ul>
+				<li><p>如果你设置p为{ font-family: Garamond}，所有的p字体都设置为Garamond</p></li>
+				<li><p>但是，如果你设置 li p {font-family: Verdana}，p的外部会是Garamond字体，内部为Verdana字体。
+				</p></li>
+				<li><p>更具体的选择器,会应用级别更高的CSS样式！</p></li>
+			</ul>
+		</div>
+		<p>摘要：特定的样式修饰优先级最高</p>
+	</body>
+</html>
