@@ -1,0 +1,48 @@
+<!--为字符串添加样式 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<script type="text/javascript">
+	var txt="Hello World!";
+
+	document.write("<p>Big: " + txt.big() + "</p>")//变大
+	document.write("<p>Small: " + txt.small() + "</p>")//变小
+
+	document.write("<p>Bold: " + txt.bold() + "</p>")//变粗
+	document.write("<p>Italic: " + txt.italics() + "</p>")//斜体
+
+	document.write("<p>Blink: " + txt.blink() + " (does not work in IE)</p>")//显示闪动的字符串？？？？
+	document.write("<p>Fixed: " + txt.fixed() + "</p>")//固定？（我也不知道具体干嘛的）
+	document.write("<p>Strike: " + txt.strike() + "</p>")//文字被划掉
+
+	document.write("<p>Fontcolor: " + txt.fontcolor("Red") + "</p>")//变颜色
+	document.write("<p>Fontsize: " + txt.fontsize(10) + "</p>")//变字号
+
+	document.write("<p>Lowercase: " + txt.toLowerCase() + "</p>")//文本全部变为小写字母
+	document.write("<p>Uppercase: " + txt.toUpperCase() + "</p>")//文本全部变为大写字母
+
+	document.write("<p>Subscript: " + txt.sub() + "</p>")//下标
+	document.write("<p>Superscript: " + txt.sup() + "</p>")//上标
+
+	document.write("<p>Link: " + txt.link("http://www.w3school.com.cn") + "</p>")//加链接
+
+	var str1="Hello world!"
+	document.write(str1.match("world") + "<br />")
+	document.write(str1.match("World") + "<br />")
+	document.write(str1.match("worlld") + "<br />")
+	document.write(str1.match("world!") + "<br />")
+	//使用 match() 来查找字符串中特定的字符，并且如果找到的话，则返回这个字符
+	var str2="Hello world!"
+	document.write(str2.indexOf("Hello") + "<br />")
+	document.write(str2.indexOf("World") + "<br />")
+	document.write(str2.indexOf("world") + "<br />")
+	//使用 indexOf() 来定位字符串中某一个指定的字符首次出现的位置。(第一个字符记为0)
+	var str3="Visit Microsoft!"
+	document.write(str3.replace(/Microsoft/,"W3School"))
+	//如何使用 replace()方法在字符串中用某些字符替换另一些字符。 
+	</script>
+</body>
+</html>

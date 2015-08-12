@@ -1,0 +1,112 @@
+<!--写入 HTML 输出-->
+<!--JavaScript：对事件作出反应（按钮）-->
+<!--改变 HTML 内容-->
+<!--改变 HTML 样式-->
+<!--验证输入-->
+
+
+<!--
+
+写入HTML输出语法：
+document.write("<h1>This is a heading</h1>");
+
+对事件作出反应语法：
+<button type="button" onclick="alert('Welcome!')">点击这里</button>
+
+改变 HTML 内容语法：
+x=document.getElementById("some id")//查找元素
+x.innerHTML="Hello JavaScript";    //改变内容
+找到这个id，然后把这句话换成"Hello JavaScript"
+
+改变 HTML 样式语法：
+x=document.getElementById("demo")  //找到元素
+x.style.color="#ff0000";           //改变样式
+
+验证输入语法：
+if isNaN(x) {alert("Not Numeric")};
+
+
+
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+
+<ul>
+<li><h1>
+JavaScript 能够直接写入 HTML 输出流中：
+</h1></li>
+
+<script>
+document.write("<h3>This is a heading</h3>");
+document.write("<p>This is a paragraph.</p>");
+</script>
+
+<p>
+您只能在 HTML 输出流中使用 <strong>document.write</strong>。
+如果您在文档已加载后使用它（比如在函数中），会覆盖整个文档。
+</p>
+
+
+<li><h1>
+JavaScript 能够对事件作出反应。比如对按钮的点击：
+</h1></li>
+<button type="button" onclick="alert('Welcome!')">点击这里</button>
+
+<li><h1>
+改变 HTML 内容
+</h1></li>
+<p id="abc">
+I love javascript!
+</p>
+<script>
+function myFunction1() //定义了一个myFunction()函数
+{
+x=document.getElementById("abc");  // 找到元素
+x.innerHTML="我爱javascript";    // 改变内容
+}
+</script>
+<button type="button" onclick="myFunction1()">点我变内容</button>
+
+<li><h1>
+	改变 HTML 样式
+</h1></li>
+
+<script>
+function myFunction2()
+{
+x=document.getElementById("abcd") // 找到元素
+x.style.color="red";          // 改变样式
+}
+</script>
+<p id="abcd">
+JavaScript 能改变 HTML 元素的样式。
+</p>
+<button type="button" onclick="myFunction2()">点击这里变颜色</button>
+
+<li><h1>
+	验证输入
+</h1></li>
+
+<p>请输入数字。如果输入值不是数字，浏览器会弹出提示框。</p>
+
+<input id="abcde" type="text">
+<script>
+function myFunction3()
+{
+var x=document.getElementById("abcde").value;
+if(x==""||isNaN(x))
+	{
+	alert("Not Numeric");
+	}
+}
+</script>
+<button type="button" onclick="myFunction3()">点击这里</button>
+
+</ul>
+</body>
+</html>

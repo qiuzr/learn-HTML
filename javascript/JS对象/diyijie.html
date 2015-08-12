@@ -1,0 +1,66 @@
+<!--
+访问对象属性的语法：
+objectName.propertyName
+访问对象方法的语法：
+objectName.methodName()
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<script>
+var message="Hello World!";
+var x=message.length;
+//x是message的长度，也就是12，length是message的属性
+//x=12
+var message="Hello world!";
+var x=message.toUpperCase();//将文本转换为大写的函数
+//x=HELLO WORLD!
+
+//创建对象，对象：Object
+person=new Object();
+person.firstname="Bill";
+person.lastname="Gates";
+person.age=56;
+person.eyecolor="blue";
+//或者：（对象用花括号{}括起来）
+person={firstname:"Bill",lastname:"gates",age:56,eyecolor:"blue"}
+document.write(person.firstname + " is " + person.age + " years old."+"</br>");
+//或者：使用对象构造器 (使用函数来构造对象）
+
+function friend(firstname,lastname,age,eyecolor)
+{
+this.firstname=firstname;
+this.lastname=lastname;
+this.age=age;
+this.eyecolor=eyecolor;
+
+//创建对象方法
+this.changeName=changeName;
+function changeName(name)
+{
+this.firstname=name;
+}
+
+}
+myFriend=new friend("Jack","Gates",21,"blue");//构造对象
+document.write(myFriend.firstname + " is " + myFriend.age + " years old."+"</br>");
+myFriend.changeName("balllll")
+document.write(myFriend.firstname + " is " + myFriend.age + " years old."+"</br>");
+/*
+如果前缀为 0，则 JavaScript会把数值常量解释为八进制数，如果前缀为 0x，则解释为十六进制数。
+*/
+var y=0377;//8进制
+var z=0xFF;//16进制
+document.write(y+"</br>");
+document.write(z);
+
+
+</script>
+
+
+</body>
+</html>

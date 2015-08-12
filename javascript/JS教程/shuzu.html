@@ -1,0 +1,146 @@
+<!--数字和对象-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+h3{
+	color:red;
+}
+</style>
+</head>
+
+<body>
+<script>
+document.write("<h3>数组</h3>");
+
+var i;//声明一个i变量
+//数组：
+var cars=new Array();//创建一个car数组Array表示数组
+cars[0]="Audi";
+cars[1]="BMW";
+cars[2]="Volvo";
+//或者
+var cars=new Array("Audi","BMW","Volvo");
+//注意：创建对象时用的小括号“()”，而直接赋值时用的是方括号“[]”,这个一不小心就容易出错。
+//或者
+var car=new Array();//先创建一个car数组
+cars=["Audi","BMW","Volvo"];//用[]赋值
+
+document.write("<h4>用cars[0]来输出数组信息：</h4>");
+document.write(cars[0])
+
+document.write("<h4>用for循环输出数组信息：</h4>");
+for (i=0;i<cars.length;i++)
+{
+document.write(cars[i] + "<br>");
+}
+
+document.write("<h4>用for in循环遍历数组：</h4>");
+for(x in cars)
+{
+	document.write(cars[x] + "<br />");
+}
+
+document.write("<h4>用concat() 方法合并两个数组：</h4>");
+var arr1=new Array();
+arr1[0]="Tom";
+arr1[1]="Jerry";
+arr1[2]="John";
+var arr2=new Array();
+arr2[0]="123";
+arr2[1]="456";
+arr2[2]="789";
+document.write(arr1.concat(arr2));
+
+document.write("<h4>用 join() 方法将数组的所有元素组成一个字符串:</h4>");
+var arr3 = new Array(3);//3表示数组的长度，有3个元素
+arr3[0] = "George"
+arr3[1] = "John"
+arr3[2] = "Thomas"
+document.write(arr3.join() + "<br />");//每个元素间用“，”隔开
+document.write(arr3.join(".") + "<br />");//每个元素间用“.”隔开
+
+document.write("<h4>用sort()方法从字面上对数组进行排序:</h4>");
+var arr4 = new Array(6)
+arr4[0] = "George"
+arr4[1] = "John"
+arr4[2] = "Thomas"
+arr4[3] = "James"
+arr4[4] = "Adrew"
+arr4[5] = "Martin"
+document.write(arr4 + "<br />")
+document.write(arr4.sort());//利用sort()函数给数组元素进行排序
+
+document.write("<h4>使用 sort() 方法从数值上对数组进行排序：</h4>");
+
+function sortNumber(a, b)
+{
+return a - b
+}
+
+var arr5 = new Array(6)
+arr5[0] = "10"
+arr5[1] = "5"
+arr5[2] = "40"
+arr5[3] = "25"
+arr5[4] = "1000"
+arr5[5] = "1"
+document.write(arr5 + "<br />");
+document.write(arr5.sort(sortNumber));//从小到大排序
+
+
+</script>
+
+<script>
+document.write("<h3>对象</h3>");
+//对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。属性由逗号分隔：
+
+var person={firstname:"Bill", lastname:"Gates", id:5566};
+//或者
+var person={
+firstname : "Bill",
+lastname  : "Gates",
+id        :  5566
+};
+//对象属性有两种寻址方式：
+name=person.lastname;
+name=person["lastname"];
+// Undefined 和 Null
+/* Undefined 这个值表示变量不含有值。
+可以通过将变量的值设置为 null 来清空变量。*/
+cars=null;
+person=null;
+//当您声明新变量时，可以使用关键词 "new" 来声明其类型：
+var carname=new String;//字符串
+var x=      new Number;//数字
+var y=      new Boolean;//布尔
+var cars=   new Array;//数组
+var person= new Object;//对象
+</script>
+
+<script>
+//在JavaScript中，对象是数据（变量），拥有属性和方法。属性和方法常被称为对象的成员。
+var txt="Hello";//创建了一个JavaScript字符串对象。拥有内建的属性 length,同时拥有若干个内建的方法。
+//属性：txt.length=5
+/*
+方法：
+txt.indexOf()
+txt.replace()
+txt.search()
+*/
+person=new Object();//person是对象
+person.firstname="Bill";
+person.lastname="Gates";
+person.age=56;
+person.eyecolor="blue";
+
+document.write(person.firstname + " is " + person.age + " years old.");
+
+
+
+
+</script>
+
+</body>
+</html>

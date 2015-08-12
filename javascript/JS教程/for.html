@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<p>点击下面的按钮，将代码块循环五次：</p>
+<button onclick="myFunction()">点击这里</button>
+<p id="demo"></p>
+<script>
+function myFunction()
+{
+var x="";
+for (var i=0;i<5;i++)
+  {
+  x="The number is " + i + "<br>";  
+  document.write(x);
+  }
+}
+
+//或者写成：
+/* 
+function myFunction()
+{
+var x="";
+for (var i=0;i<5;i++)
+  {
+  x=x + "The number is " + i + "<br>";
+  }
+document.getElementById("demo").innerHTML=x;
+}
+*/
+</script>
+
+<script>
+var car;//不用声明car变量，直接赋值也可以。
+cars=["BMW","Volvo","Saab","Ford"];
+for (var i=0,len=cars.length; i<len; i++)
+{
+document.write(cars[i] + "<br>");
+}
+
+//你也可以省略语句1
+cars=["111","222","333","444"];
+var i=2,len=cars.length;
+for (; i<len; i++)//从333开始
+{
+document.write(cars[i] + "<br>");
+}
+//你也可以省略语句3
+cars=["1111","2222","3333","4444"];
+var i=0,len=cars.length;
+for (; i<len; )
+{
+document.write(cars[i] + "<br>");
+i++;//这就相当于语句3
+}
+</script>
+</body>
+</html>

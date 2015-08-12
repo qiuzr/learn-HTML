@@ -1,0 +1,50 @@
+<!--RegExp 对象-->
+<!--
+
+RegExp 是正则表达式的缩写
+RegExp 对象有 3 个方法：test()、exec() 以及 compile()。
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+	h3{
+		color:red;
+	}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	var patt1=new RegExp("e");//定义一个RegExp对象,模式为"e"
+	document.write("<h3>test()方法</h3>")
+	document.write("<h4>test() 方法检索字符串中的指定值。返回值是 true 或 false</h4>")
+	document.write(patt1.test("The best things in life are free")); 
+	//由于该字符串中存在字母 "e"，以上代码的输出将是：true
+	document.write("<h3>exec()方法</h3>")
+	document.write("<h4>exec()方法检索字符串中的指定值。返回值是被找到的值。如果没有发现匹配，则返回 null </h4>")
+	document.write(patt1.exec("The best things in life are free")+"<br />"+"<br />"); 
+	//由于该字符串中存在字母 "e"，以上代码的输出将是：e
+	document.write("<h3>如果需要找到所有某个字符的所有存在，则可以使用 g 参数(global): </h3>")
+	document.write("<h4>找到第一个e,并存储其位置；如果再次运行 exec(),则从存储的位置开始检索，并找到下一个e，并存储其位置</h4>")
+	var patt2=new RegExp("e","g");
+	do
+	{
+	result=patt2.exec("The best things in life are free");
+	document.write(result);
+	}
+	while (result!=null)
+	//找到第一个"e",并存储其位置 
+	//如果再次运行 exec(),则从存储的位置开始检索，并找到下一个 "e"，并存储其位置 
+	document.write("<h3>compile() 方法用于改变 RegExp: </h3>")
+
+	var patt3=new RegExp("e");
+	document.write(patt3.test("The best things in life are free"));
+	patt3.compile("d");//改变RegExp的参数，将e改成了d
+	document.write(patt3.test("The best things in life are free"));
+
+
+</script>
+</body>
+</html>

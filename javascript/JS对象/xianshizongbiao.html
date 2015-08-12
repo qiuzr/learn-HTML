@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type="text/javascript">
+function startTime()
+{
+var today=new Date()
+var h=today.getHours()//小时
+var m=today.getMinutes()//分钟
+var s=today.getSeconds()//秒
+// add a zero in front of numbers<10
+m=checkTime(m)//checkTime函数在下面定义了
+s=checkTime(s)
+document.getElementById('txt').innerHTML=h+":"+m+":"+s
+t=setTimeout('startTime()',500)
+//每500毫秒获取一下时间，并重置时间（大概是吧 - - ）
+//有了这句话，屏幕上的钟表时间才会一秒一秒的变化！
+}
+
+function checkTime(i)
+{
+if (i<10) 
+  {i="0" + i}
+  return i
+}
+</script>
+</head>
+
+<body onload="startTime()"> <!--获取当前时间-->
+<div id="txt"></div>
+</body>
+</html>

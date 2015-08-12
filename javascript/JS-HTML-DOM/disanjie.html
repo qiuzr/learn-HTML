@@ -1,0 +1,162 @@
+<!--JS HTML DOM 事件-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body onload="checkCookies()">
+<!--当页面加载完成后调用checkCookies（）函数-->
+<h1 onclick="this.innerHTML='谢谢!'">请点击该文本</h1>
+<!--
+onclik 表示点击 点击后这个文本的内容（innerHTML变为谢谢）
+onclik 后面的语句要用双引号“”括起来
+-->
+
+<script>
+	function change(id)
+	{
+		id.innerHTML="Thank you!"
+	}
+</script>
+
+<h1 onclick="change(this)">点击我！</h1>
+<!-- 
+onclik在这里调用了一个函数change
+-->
+<p>点击下面的按钮将会出现时间</p>
+<button style="button" onclick="displayDate()">
+点击我
+</button>
+<p id="demo1">123</p>
+<script>
+	function displayDate()
+	{
+		document.getElementById("demo1").innerHTML=Date();
+	}
+</script>
+
+
+<!-- 或者 -->
+<p>点击就可以显示时间的第二种方法：使用 JavaScript 来向 HTML 元素分配事件</p>
+<button id="myBtn">点击这里</button>
+<script type="text/javascript">
+	document.getElementById("myBtn").onclick=function()
+	{displayDate2()};
+	//用javascript访问了button的onclik属性，并给其赋值为函数displayDate2
+	function displayDate2()
+	{
+		document.getElementById("demo2").innerHTML=Date();
+	}
+</script>
+<p id="demo2">321</p>
+<!--
+
+onload 和 onunload 事件会在用户进入或离开页面时被触发。
+onload 事件可用于检测访问者的浏览器类型和浏览器版本，并基于这些信息来加载网页的正确版本。
+onload 和 onunload 事件可用于处理 cookie :
+<body onload="checkCookies()">
+-->
+
+<script type="text/javascript">
+	function checkCookies()
+{
+if (navigator.cookieEnabled==true)
+	{
+	alert("已启用 cookie")//alert的意思是出现弹窗
+	}
+else
+	{
+	alert("未启用 cookie")
+	}
+}
+</script>
+
+<script>
+function myFunction()
+{
+var x=document.getElementById("fname");
+x.value=x.value.toUpperCase();
+}
+</script>
+
+请输入英文字符：<input type="text" id="fname" onchange="myFunction()">
+<!-- 当用户改变输入字段的内容时，会调用 upperCase() 函数。 -->
+<p>当您离开输入字段时，会触发将输入文本转换为大写的函数。</p>
+
+<!--
+onmouseover 和 onmouseout 事件可用于在用户的鼠标移至 HTML 元素上方或移出元素时触发函数。
+-->
+<script>
+function mOver(obj)//鼠标已经移到上面时,obj是个id形参
+{
+obj.innerHTML="谢谢"
+}
+
+function mOut(obj)//没有把鼠标没有在上面时，obj是个id形参
+{
+obj.innerHTML="把鼠标移到上面"
+}
+</script>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" style="background-color:green;width:120px;height:20px;padding:40px;color:#ffffff;margin:2cm">把鼠标移到上面</div>
+<!--
+onmouseover:鼠标在上面时
+onmouseout：鼠标没在上面时
+-->
+
+<!--
+
+或者 
+<h1 onmouseover="style.color='red'" onmouseout="style.color='blue'">
+请把鼠标移到这段文本上
+</h1>
+
+-->
+
+<script>
+function mDown(obj)
+{
+obj.style.backgroundColor="blue";
+obj.style.color="white";
+obj.innerHTML="请释放鼠标按钮"
+}
+
+function mUp(obj)
+{
+obj.style.backgroundColor="yellow";
+obj.style.color="black";
+obj.innerHTML="请按下鼠标按钮"
+}
+</script>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:green;color:white;width:90px;height:20px;padding:40px;font-size:12px;margin:2cm">请点击这里</div>
+<!--
+mDown:鼠标按下去
+nUP：鼠标抬上来
+-->
+
+<script>
+function mDown(obj)
+{
+obj.src="http://pic.nipic.com/2007-11-09/2007119122519868_2.jpg";//蜗牛
+}
+
+function mUp(obj)
+{
+obj.src="http://pica.nipic.com/2007-11-09/200711912453162_2.jpg";//熊猫
+}
+</script>
+<image src="http://pica.nipic.com/2007-11-09/200711912453162_2.jpg"  width="100" height="80" onmousedown="mDown(this)" onmouseup="mUp(this)" style="margin:2cm">
+<p style="margin:2cm">点击图片不放可以改变图片</p>
+
+<script>
+function myFunction(x)//x是一个id
+{
+x.style.background="yellow";
+}
+</script>
+
+请输入英文字符：<input type="text" onfocus="myFunction(this)">
+<!--onfocus表示输入字段获得焦点-->
+<p>当输入字段获得焦点时，会触发改变背景颜色的函数。</p>
+</body>
+</html>

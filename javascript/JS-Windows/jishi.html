@@ -1,0 +1,72 @@
+<!--time-->
+<!--
+setTimeout() 
+未来的某时执行代码 
+clearTimeout() 
+取消setTimeout() 
+-->
+<!--
+ var t=setTimeout("javascript语句",毫秒)
+ setTimeout() 方法会返回某个值。在上面的语句中，值被储存在名为 t 的变量中。假如你希望取消这个 setTimeout()，你可以使用这个变量名来指定它。
+ setTimeout() 的第一个参数是含有 JavaScript 语句的字符串。这个语句可能诸如 "alert('5 seconds!')"，或者对函数的调用。
+ 第二个参数指示从当前起多少毫秒后执行第一个参数。(1000 毫秒等于一秒。)
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<script type="text/javascript">
+	//2 秒后弹出一个警告框
+	function timedMsg()
+	{
+	var t=setTimeout("alert('已经过了2秒！')",2000)
+	//函数setTimeout:未来2000毫秒时，执行alert("已经过了2秒！")
+	}
+
+	function timedText()
+	{
+	var t1=setTimeout("document.getElementById('txt').value='2 秒'",2000)
+	//找到id=txt的元素，2秒后，将其value属性改为'2秒'
+	var t2=setTimeout("document.getElementById('txt').value='4 秒'",4000)
+	var t3=setTimeout("document.getElementById('txt').value='6 秒'",6000)
+	}
+</script>
+<form>
+<input type="button" value="显示定时的警告框" onClick = "timedMsg()">
+</form>
+<p>请点击上面的按钮。警告框会在 2 秒后显示。</p>
+
+<input type="button" value="显示计时的文本" onClick="timedText()">
+<input type="text" id="txt">
+<!--text的value值是指文本框显示的文本-->
+<p>点击上面的按钮。输入框会显示出已经逝去的时间（2、4、6 秒）。</p>
+<!--带有停止按钮的无穷循环中的计时事件-->
+<script>
+var c=0;
+var t;
+function timeCount()//一秒一秒数时间
+{
+	document.getElementById('txt2').value=c;
+	c=c+1;
+	t=setTimeout("timeCount()",1000);
+}
+function stopCount()//停止计时
+{
+	clearTimeout(t);
+	c=0;
+	document.getElementById('txt2').value=c;
+}
+
+
+
+</script>
+<form>
+<input type="button" onClick="timeCount()" value="开始计时">
+<input type="text" id="txt2">
+<input type="button" onClick="stopCount()" value="停止计时">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!--script标签-->
+<!--可以把script标签放在head或者body中，都可以-->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script>
+function myFunction()
+{
+document.getElementById("demo").innerHTML="My First JavaScript Function";
+}
+</script>
+
+</head>
+<body>
+	<p>如需在 HTML 页面中插入 JavaScript，请使用 script 标签</p>
+	<p>通常的做法是把函数放入  head 部分中</p>
+	<p id="demo">点击下面的按钮我会改变内容</p>
+<button type="button" onclick="myFunction()">Try it</button>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!-- 第二节 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<ul>
+<li><h2>写入  document.write() </h2></li>
+<script>
+document.write(Date());//Date()获取你电脑上的时间信息
+</script>
+
+<li><h2>改变  HTML  内容 </h2></li>
+<p id="123">hello~~~~</p>
+<script>
+document.getElementById("123").innerHTML="hi!";
+</script>
+
+<li><h2>改变  HTML  属性 （例如改变img的src属性）</h2></li>
+<img id="image" src="http://pica.nipic.com/2007-11-09/200711912453162_2.jpg"  width="100" height="80"  >
+<!-- 熊猫 -->
+<script>
+document.getElementById("image").src="http://pic.nipic.com/2007-11-09/2007119122519868_2.jpg";//蜗牛
+</script>
+
+<li><h2>改变  HTML  样式</h2></li>
+<p>语法： document.getElementById(id).style.property=new style </p>
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+document.getElementById("p2").style.color="blue";
+document.getElementById("p2").style.fontFamily="Arial";
+document.getElementById("p2").style.fontSize="30px";
+/*
+这样也可以
+document.getElementById("p2").style.fontSize="larger";
+*/
+</script>
+
+<h1 id="id1">My Heading 1</h1>
+<button type="button" onclick=" document.getElementById('id1').style.color='red' ">
+点我变颜色</button>
+
+<li><h2>隐藏和显示文本</h2></li>
+<p id="p3">这是一段文本。</p>
+<input type="button" value="隐藏文本" onclick="document.getElementById('p3').style.visibility='hidden'" />
+<input type="button" value="显示文本" onclick="document.getElementById('p3').style.visibility='visible'" />
+
+
+
+</ul>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!--创建后退按钮-->
+<!--
+
+history.back() - 与在浏览器点击后退按钮相同 
+history.forward() - 与在浏览器中点击按钮向前相同 
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<script>
+function goBack()
+  {
+  window.history.back()
+  }
+function goForward()
+  {
+  window.history.forward()
+  }
+</script>
+<input type="button" value="转到上一页" onclick="goBack()">
+<input type="button" value="转到下一页" onclick="goForward()">
+
+</body>
+</html>

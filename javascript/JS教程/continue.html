@@ -1,0 +1,81 @@
+<!--break , continue -->
+<!--
+
+break 语句用于跳出循环。
+
+continue 用于跳过循环中的一个迭代。
+
+continue 语句（带有或不带标签引用）只能用在循环中。
+
+break 语句（不带标签引用），只能用在循环或 switch 中。
+
+通过标签引用，break 语句可用于跳出任何 JavaScript 代码块
+
+语法:
+break labelname;
+
+continue labelname;
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<p>点击按钮，测试带有 break 语句的循环。</p>
+<button onclick="myFunction1()">点击这里</button>
+<p id="demo1"></p>
+
+<script>
+function myFunction1()
+{
+var x="";//声明x的时候先定义他是空的字符串。
+for (var i=0;i<10;i++)
+  {
+  if (i==3)//当if语句只有一行代码时，可以省略花括号
+    {
+    break; //当i=3时break：跳出循环，到3就结束了
+    }
+  x=x + "The number is " + i + "<br>";
+  }
+document.getElementById("demo1").innerHTML=x;
+}
+</script>
+
+<p>点击下面的按钮来执行循环，该循环会跳过 i=3 的步进。</p>
+<button onclick="myFunction2()">点击这里</button>
+<p id="demo2"></p>
+
+<script>
+function myFunction2()
+{
+var x="";//声明x的时候先定义他是空的字符串。
+for (var i=0;i<10;i++)
+  {
+  if (i==3)//当if语句只有一行代码时，可以省略花括号
+    {
+    continue; //跳过i=3的情况，然后继续循环
+    }
+  x=x + "The number is " + i + "<br>";
+  }
+document.getElementById("demo2").innerHTML=x;
+}
+</script>
+
+<script>
+cars=["BMW","Volvo","Saab","Ford"];//car数组，直接赋值法
+list:
+{
+document.write(cars[0] + "<br>"); 
+document.write(cars[1] + "<br>"); 
+document.write(cars[2] + "<br>"); 
+break list;//break+标签名，可以跳出任何javascript块
+document.write(cars[3] + "<br>"); 
+document.write(cars[4] + "<br>"); 
+document.write(cars[5] + "<br>"); 
+}
+</script>
+
+</body>
+</html>

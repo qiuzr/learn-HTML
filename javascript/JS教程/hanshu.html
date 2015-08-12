@@ -1,0 +1,69 @@
+<!--函数-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+
+<p id="demo1">123</p><!--输出5-->
+<p id="demo2">456</p><!--输出12-->
+
+
+<script>
+/*
+函数就是包裹在花括号中的代码块，前面使用了关键词 function：
+function functionname(var1,var2,...)
+{
+这里是要执行的代码
+}
+可由 JavaScript 在任何位置进行调用
+JavaScript 对大小写敏感。关键词 function 必须是小写的
+*/
+function myFunction1(name,job)//name 和 job是形参
+{
+	alert("Welcome " + name + ", the " + job);
+	//alert表示弹窗。
+}
+
+//有返回值的函数
+function myFunction2()
+{
+var x=5;
+return x;
+}
+//调用返回值:
+var myVar=myFunction2();
+document.write(myVar);//输出5
+
+document.getElementById("demo1").innerHTML=myFunction2();
+//"demo1"元素的 innerHTML 将成为 5，也就是函数 "myFunction()" 所返回的值。
+//你首先要先定义id="demo1"的元素！所以<p id="demo1">要定义在这句话的前面！
+function myFunction3(a,b)
+{
+return a*b;
+}
+document.getElementById("demo2").innerHTML=myFunction3(4,3);
+
+//在您仅仅希望退出函数时 ，也可使用 return 语句。
+function myFunction(a,b)
+{
+if (a>b)
+  {
+  return;
+  }
+x=a+b
+}
+//如果 a 大于 b，则上面的代码将退出函数，并不会计算 a 和 b 的总和。
+
+
+</script>
+<p>点击这个按钮，来调用带参数的函数。</p>
+<button onclick="myFunction1('Bill Gates','CEO')">点击这里</button>
+
+
+
+
+
+</body>
+<html>

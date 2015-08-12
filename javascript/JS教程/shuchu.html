@@ -1,0 +1,47 @@
+<!--JavaScript 输出-->
+<!--如需从 JavaScript 访问某个 HTML 元素，您可以使用 document.getElementById(id) 方法。-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<h1>My First Web Page</h1>
+
+<p id="demo">My First Paragraph.</p>
+
+<script>
+document.getElementById("demo").innerHTML="My First JavaScript";
+//替换内容：浏览器将访问 id="demo" 的 HTML 元素，并把它的内容（innerHTML）替换为 "My First JavaScript"。
+document.write("<p>我是通过javascript直接写入进来的</p>");
+</script>
+
+<!--
+请使用 document.write() 仅仅向文档输出写内容。
+如果在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖。
+实例如下：
+-->
+<h1>我将演示：</br>
+"在文档已完成加载后执行 document.write，整个 HTML 页面将被覆盖"的情况</h1>
+<p>balabalabala</p>
+<button onclick="myFunction()">点击这里</button>
+<script>
+function myFunction()
+{
+document.write("糟糕！文档消失了。");
+//这是因为文档已经完成加载了，又执行了 document.write 
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+</body>
+</html>
+

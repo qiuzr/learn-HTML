@@ -1,0 +1,40 @@
+<!-- js dom 第一节 -->
+<!--
+查找 id="intro" 元素
+var x=document.getElementById("intro");
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<ul>
+<li><h2>通过id找元素（用getElementById方法）</h2>
+<p id="intro">Hello World!</p></li>
+
+<script>
+var x;
+x=document.getElementById("intro");
+//x现在代表的就是id为intro的元素
+document.write('<p>id="intro" 的段落中的文本是：' + x.innerHTML + '</p>');
+//x.innerHTML表示x的内容，也就是id为intro的元素的内容
+</script>
+
+<li><h2>查找 id="main" 的元素，然后查找 "main" 中的所有 "p" 元素（用getElementsByTagName方法）</h2></li>
+
+<div id="main">
+<p>我是id=main中第一个标签名为p的元素</p>
+<p>我是id=main中第二个标签名为p的元素</p>
+</div>
+
+<script>
+var x=document.getElementById("main");//找到id=main的元素
+var y=x.getElementsByTagName("p");//x中标签名称为p的元素
+document.write('id=main 中第一个标签为p的元素内容为：' +y[0].innerHTML+'</br>');
+document.write('id=main 中第二个标签为p的元素内容为：'+y[1].innerHTML);
+</script>
+
+</body>
+</html>

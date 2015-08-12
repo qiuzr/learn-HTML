@@ -1,0 +1,51 @@
+<!--JavaScript 语句-->
+<!--
+分号用于分隔 JavaScript 语句。
+
+通常我们在每条可执行的语句结尾添加分号。
+
+使用分号的另一用处是在一行中编写多条语句。
+-->
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My Web Page</h1>
+
+<p id="demo">A Paragraph.</p>
+
+<div id="myDIV">A DIV.</div>
+
+<script>
+document.getElementById("myDIV").innerHTML="Hello World";
+document.getElementById("demo").innerHTML="How are you?";
+//浏览器会按照编写顺序来执行每条语句。
+function myFunction()
+{
+document.getElementById("demo").innerHTML="Hello World";
+document.getElementById("myDIV").innerHTML="How are you?";
+}
+//JavaScript 语句通过代码块的形式进行组合。
+//块由左花括号开始，由右花括号结束。
+//块的作用是使语句序列一起执行。
+//JavaScript函数是将语句组合在块中的典型例子。
+//JavaScript 对大小写是敏感的。JavaScript 会忽略多余的空格。
+
+document.write("Hello \
+World!");
+//您可以在文本字符串中使用反斜杠对代码行进行换行
+/*
+document.write("Hello
+	World!"); 这样写是错误的呀！
+想换行必须用“\” 
+
+document.write \
+("Hello World!"); 
+但是这样写也是错的……
+*/
+
+</script>
+
+</body>
+</html>
