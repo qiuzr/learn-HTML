@@ -1,0 +1,90 @@
+<!--HTML 表单-->
+<!--用form标签创建表单-->
+<!--
+多数情况下被用到的表单标签是输入标签（<input>）。输入类型是由类型属性（type）定义的。
+输入类型包括：文本域、
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<form>
+
+<h3>文本域 type="text" </h3>
+名：
+<input type="text" name="firstname"><!--text就是文本域-->
+<br />
+姓：
+<input type="text" name="lastname">
+<br />
+用户：
+<input type="text" name="user">
+<br />
+密码：
+<input type="password" name="password">
+<p>
+请注意，当您在密码域中键入字符时，浏览器将使用项目符号来代替这些字符。
+</p>
+</form>
+
+<h3>单选按钮: type="radio" </h3>
+<input type="radio" name="sex" value="male" /> Male
+<br />
+<input type="radio" name="sex" value="female" /> Female
+
+<h3>复选框: type="checkbox" </h3>
+<input type="checkbox" name="bike" />
+I have a bike
+<br />
+<input type="checkbox" name="car" />
+I have a car
+
+<h3>表单的动作属性（Action）和确认按钮 </h3>
+<p>当用户单击确认按钮时，表单的内容会被传送到另一个文件。表单的动作属性定义了目的文件的文件名。由动作属性定义的这个文件通常会对接收到的输入数据进行相关的处理。</p>
+<form name="input" action="html_form_action.asp" method="get">
+Username: 
+<input type="text" name="user" />
+<input type="submit" value="Submit" />
+</form>
+<p>假如您在上面的文本框内键入几个字母，然后点击确认按钮，那么输入数据会传送到 "html_form_action.asp" 的页面。该页面将显示出输入的结果。</p>
+
+<h3>简单的下拉列表</h3>
+<select name="cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat">Fiat</option>
+<option value="audi">Audi</option>
+</select>
+<h3>有默认值的下拉列表</h3>
+<select name="cars">
+<option value="volvo">Volvo</option>
+<option value="saab">Saab</option>
+<option value="fiat" selected="selected">Fiat</option>
+<option value="audi">Audi</option>
+</select>
+<!--Fiat是默认值 value表示你选择它以后提交上去的信息（也就是值）-->
+<h3>创建文本域，可写入字符的字数不限</h3>
+<!--
+创建文本域（多行文本输入控件）。用户可在文本域中写入文本。可写入字符的字数不受限制。
+-->
+<!--rows="10" cols="30" : 10行，30列-->
+<textarea rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+<h3>创建按钮</h3>
+<input type="button" value="Hello world!">
+<h3>在数据周围绘制一个带标题的框</h3>
+ <fieldset><!--框-->
+    <legend>健康信息</legend><!--标题-->
+    身高：<input type="text" /><!--文本框-->
+    体重：<input type="text" /><!--文本框-->
+  </fieldset>
+
+</form>
+</body>
+</html>
+
+
